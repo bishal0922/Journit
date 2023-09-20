@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link, Route, BrowserRouter as Router} from 'react-router-dom';
-import JournalEntryView from './JournalEntryView';
+// import { Link, Route, BrowserRouter as Router} from 'react-router-dom';
+// import JournalEntryView from './JournalEntryView';
 
 const JournalApp = () => {
   const [journalText, setJournalText] = useState('');
@@ -34,7 +34,7 @@ const JournalApp = () => {
   }, []);
 
   return (
-    <Router>
+    // <Router>
     <div>
       <h1>My Journal</h1>
 
@@ -70,20 +70,22 @@ const JournalApp = () => {
 
                 {/* create a link here */}
               <strong>{entry.date}:</strong> {entry.text}
-              <Link to={`/entry/${entry.date}`}>{entry.date}</Link>
+              {/* <Link to={`/entry/${entry.date}`}>{entry.date}</Link> */}
 
             </li>
           ))}
         </ul>
       </div>
+
     </div>
 
-    {/* Define a route for the JournalEntryView component */}
-    <Route path="/entry/:date">
-        <JournalEntryView />
-    </Route>
+    // {/* Define a route for the JournalEntryView component
+    // <Route path="/entry/:date">
+    //     <JournalEntryView />
+    // </Route> */}
 
-  </Router>
+//   {/* </Router> */}
+
 
   );
   
